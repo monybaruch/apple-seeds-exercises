@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .form {
+        margin-top: 20px;
+      }
+      input {
+        margin-bottom: 10px;
+      }
+      u{
+        color: blue;
+      }
+    </style>
+    <title>Basic Forms</title>
+  </head>
+  <body>
+    <h1>Create an account please:</h1>
+    <form action="" class="form">
+      <div>
+        <label for="firstName" name="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" placeholder="enter first name!"/>
+      </div>
+      <br />
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="enter last name!"/>
+      </div>
+      <br />
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="enter email!"/>
+      </div>
+      <br />
+      <div>
+        <label for="gender">Choose your gender: </label>
+        <select name="sex" id="sex">
+          <option value="male" selected>male</option>
+          <option value="female">female</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label for="age">select your age:</label>
+        <input type="number" />
+      </div>
+      <br>
+      <div>
+        <label for="">Tell us a little about yourself:</label>
+        <br>
+        <br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </div>
+      <br>
+      <div>
+        <input type="checkbox" name="terms" id="terms"> I agree to <u>terms of service! </u>  
+      </div>
+      <button type="submit">Click for submit</button>  
+      <button type="reset">Click to reset the form</button>
+    </form>
+  </body>
+</html>
