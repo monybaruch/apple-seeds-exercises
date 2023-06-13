@@ -1,0 +1,17 @@
+.main {
+  font-style: italic;
+  font-size: 1rem;
+  color: red;
+}
+
+#header {
+  color: blue;
+}
+span{
+  color:black
+}
+.footer-items{
+  font-size: 1.4rem;
+  margin: 15px;
+  padding: 10px;
+} 
