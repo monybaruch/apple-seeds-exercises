@@ -2,16 +2,21 @@
   font-style: italic;
   font-size: 1rem;
   color: red;
+  font-family: "Roboto", sans-serif;
 }
 
 #header {
   color: blue;
+  font-family: "Rubik", sans-serif;
 }
-span{
-  color:black
+span {
+  color: black;
 }
-.footer-items{
+.footer-items {
   font-size: 1.4rem;
   margin: 15px;
   padding: 10px;
-} 
+}
+p {
+  font-family: "Rubik", sans-serif;
+}
