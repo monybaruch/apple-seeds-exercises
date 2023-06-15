@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>buttons</title>
+    <style>
+      * {
+        background-color: cadetblue;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+        text-align: center;
+        margin: auto;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      button {
+        margin: 50px;
+        padding: 50px;
+      }
+      .btn-1 {
+        background-color: red;
+        border: none;
+      }
+      .btn-2 {
+        background-color: rgb(38, 123, 105);
+        border: none;
+      }
+      .btn-1:hover,
+      .btn-2:hover,
+      .btn-3:hover,
+      .btn-4:hover {
+        opacity: 0.6;
+      }
+      .btn-3 {
+        background-color: rgb(102, 255, 0);
+        border: none;
+
+        border-radius: 10px;
+      }
+      .btn-4 {
+        background-color: rgb(255, 0, 136);
+        border-radius: 20px;
+        border: none;
+      }
+      .btn-5 {
+        background-color: transparent;
+        border: 2px solid rgb(0, 170, 255);
+      }
+      .btn-5:hover {
+        background-color: rgb(0, 170, 255);
+      }
+      .btn-6 {
+        background-color: transparent;
+        border: 2px solid rgb(183, 255, 0);
+      }
+      .btn-6:hover {
+        background-color: rgb(183, 255, 0);
+      }
+      .btn-7 {
+        background-color: transparent;
+        border-radius: 20px;
+        border: 2px solid rgb(255, 0, 102);
+      }
+      .btn-7:hover {
+        background-color: rgb(255, 0, 102);
+      }
+      .btn-8 {
+        background-color: transparent;
+        border-radius: 20px;
+        border: 2px solid rgb(255, 196, 0);
+      }
+      .btn-8:hover {
+        background-color: rgb(255, 196, 0);
+      }
+
+      .container {
+        position: relative;
+        width: 700px;
+        margin-bottom: 100px;
+        height: 25vh;
+      }
+
+      .buttons {
+        position: relative;
+      }
+      .btn-right {
+        position: absolute;
+        right: 10px;
+      }
+      .btn-left {
+        position: absolute;
+        left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Flat</h1>
+      <div class="buttons">
+        <button class="btn-1 btn-left">register</button>
+        <button class="btn-2 btn-right">submit</button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Round</h1>
+      <div class="buttons">
+        <button class="btn-3 btn-left">register</button>
+        <button class="btn-4 btn-right">submit</button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Flat Ghost</h1>
+      <div class="buttons">
+        <button class="btn-5 btn-left">register</button>
+        <button class="btn-6 btn-right">submit</button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Round Ghost</h1>
+      <div class="buttons">
+        <button class="btn-7 btn-left">register</button>
+        <button class="btn-8 btn-right">submit</button>
+      </div>
+    </div>
+  </body>
+</html>
