@@ -113,3 +113,33 @@ label {
   display: block;
   height: 100px;
 }
+
+@media only screen and (max-width: 1024px) {
+  body {
+    background-color: rgb(230, 203, 173);
+  }
+  .nav-container label,
+  input,
+  button {
+    display: block;
+    margin: 50px auto;
+  }
+
+  .nav-container nav {
+    height: 100%;
+  }
+  .float-right {
+    float: none;
+  }
+  .float-left {
+    float: none;
+  }
+
+  .float-right ul li {
+    float: none;
+  }
+
+  .float-right ul {
+    margin: auto;
+  }
+}
