@@ -17,11 +17,9 @@
         background: black;
         opacity: 0.8;
         justify-content: space-between;
-        align-items: center;
       }
       .flex-items {
         height: auto;
-        background: red;
         margin: 20px;
         color: white;
         padding: 20px;
@@ -36,12 +34,18 @@
         text-decoration: none;
         color: white;
         font-size: 1.2rem;
+        margin-left: 10px;
+      }
+      .ul-flex li a:hover,
+      h1:hover {
+        color: cadetblue;
       }
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 768px) {
         .container {
           flex-direction: column;
           height: auto;
+          align-items: center;
         }
         .ul-flex {
           flex-direction: column;
