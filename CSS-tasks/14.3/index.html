@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Navbar Animation</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: rgb(174, 163, 163);
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 20px;
+      }
+      ul {
+        display: flex;
+        list-style-type: none;
+        gap: 40px;
+      }
+      a {
+        text-decoration: none;
+        padding: 5px 0;
+        transition: all 0.4s ease-in-out;
+      }
+
+      a:hover {
+        border-bottom: 2px black solid;
+        border-top: 2px black solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">ABOUT</a></li>
+        <li><a href="">SERVICES</a></li>
+        <li><a href="">PORTFOLIO</a></li>
+        <li><a href="">CONTACT</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

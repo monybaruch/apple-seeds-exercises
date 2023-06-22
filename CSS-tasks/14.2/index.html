@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons transition</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: rgb(174, 163, 163);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn {
+        background: rgb(174, 163, 163);
+        height: 200px;
+        width: 200px;
+        border: black 2px solid;
+        color: black;
+        font-size: 2rem;
+        position: relative;
+        overflow: hidden;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-1::before {
+        content: "Cool!";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 2rem;
+        background: red;
+        transition: all 2s ease-in-out;
+        transform: translateY(-100%);
+      }
+      .btn-1:hover::before {
+        transform: translateY(0);
+      }
+
+      .btn-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        color: black;
+        font-size: 2rem;
+        background: blue;
+        transition: all 2s ease-in-out;
+        transform: translateX(-100%);
+      }
+      .btn-2:hover::before {
+        transform: translateX(0);
+      }
+
+      .btn-3::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -200px;
+        height: 100%;
+        width: 100%;
+        color: black;
+        font-size: 2rem;
+        background: yellow;
+        transition: all 2s ease-in-out;
+        transform: rotate(0);
+      }
+      .btn-3:hover::before {
+        transform: rotate(45deg);
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn btn-1">TranslateY</div>
+    <div class="btn btn-2">TranslateX</div>
+    <div class="btn btn-3">Rotate</div>
+    <div class="btn btn-4">Scale</div>
+    <div class="btn btn-5">Skew</div>
+  </body>
+</html>
