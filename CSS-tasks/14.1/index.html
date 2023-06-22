@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo selector animation</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: cadetblue;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box {
+        height: 300px;
+        width: 300px;
+        background: blue;
+        position: relative;
+        transition: all 2s ease-in-out;
+        overflow: hidden;
+      }
+      .box::before {
+        content: "";
+        height: 300px;
+        width: 300px;
+        background: rgb(0, 149, 255);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        transition: all 2s ease-in-out;
+        transform: translateX(100%);
+      }
+      .box:hover::before {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
