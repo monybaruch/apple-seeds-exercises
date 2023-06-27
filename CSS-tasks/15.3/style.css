@@ -23,6 +23,7 @@ body {
   height: 100vh;
   margin: 0 auto;
   padding: 20px;
+  height: auto;
 }
 
 .header {
@@ -53,4 +54,29 @@ body {
 .grid-items {
   border-radius: 20px;
   text-align: center;
+}
+
+/* table size*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid-container {
+    width: auto;
+    grid-template-areas:
+      "header header  header"
+      "side-bar main  main"
+      "second-side-bar second-side-bar second-side-bar"
+      "footer footer footer";
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    width: auto;
+    grid-template-areas:
+      "header"
+      "side-bar"
+      "main"
+      "second-side-bar"
+      "footer";
+  }
 }
