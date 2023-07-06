@@ -6,6 +6,9 @@
 // Current Year e.g 2021
 
 // Create a function that will return a string in the following format: `Today is Sunday the 31 of January 2021’
+
+//long solution
+
 const dayNames = [
   "Sunday",
   "Monday",
@@ -48,3 +51,19 @@ function getDate() {
 }
 
 console.log(getDate());
+
+//short solution
+
+function getDate2() {
+  const getDate = new Date(Date.UTC(2021, 0, 31, 4, 0, 0));
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const fullDate = getDate.toLocaleDateString(undefined, options);
+  return `Today is ${fullDate}`;
+}
+
+console.log(getDate2());
