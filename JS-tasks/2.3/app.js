@@ -9,3 +9,9 @@ function calcCircleArea(radius) {
 const area = calcCircleArea(88);
 const rounded = area.toFixed(2);
 console.log(rounded);
+
+// arrow function
+const calcCircleArea2 = (radius) => {
+  return (2 * Math.PI * radius).toFixed(2);
+};
+console.log(calcCircleArea2(9));
