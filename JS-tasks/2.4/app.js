@@ -47,6 +47,7 @@ function getDate() {
   const getYear = getDate.getUTCFullYear();
 
   const getDay = dayNames[getDayIndex];
+
   return `Today is ${getDay} the ${getDayOfMonth} of ${getMonth} ${getYear}`;
 }
 
