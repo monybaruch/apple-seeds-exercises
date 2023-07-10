@@ -20,15 +20,15 @@ arguments and observe the console output to see if the country meets Sarah's cri
 You can temporarily modify the argument values to test different 
 scenarios and check if the condition inside the if statement behaves as expected.*/
 
-const countryToLiveIn = (language, isIsland, population, country) => {
-  if (language === "English" && !isIsland && population < 50) {
+const countryToLiveIn = (language, population, isIsland, country) => {
+  if (language === "English" && population < 50 && !isIsland) {
     console.log(`You should consider living in ${country}`);
   } else {
     console.log(`${country} does not meet your criteria`);
   }
 };
 
-countryToLiveIn("English", false, 40, "Canada");
+countryToLiveIn("English", 40, false, "Canada");
 
 const countryToLiveIn2 = (language, isIsland, population, country) =>
   language === "English" && !isIsland && population < 50
