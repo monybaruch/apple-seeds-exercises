@@ -9,7 +9,7 @@ Note:
 It shouldn’t be case sensitive*/
 
 const colorPicker = (color) => {
-  switch (color) {
+  switch (color.toLowerCase()) {
     case "yellow":
     case "pink":
     case "orange":
@@ -23,6 +23,6 @@ const colorPicker = (color) => {
   }
 };
 
-console.log(colorPicker("brown"));
-console.log(colorPicker("yellow"));
+console.log(colorPicker("Brown"));
+console.log(colorPicker("YeLlow"));
 console.log(colorPicker("red"));
