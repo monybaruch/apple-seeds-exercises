@@ -73,8 +73,6 @@ bookUtils.isSamePublisher = function (book1, book2) {
     book1.publisher.name === book2.publisher.name &&
     book1.publisher.location === book2.publisher.location
   );
-  // ? true
-  // : false;
 };
 
 console.log(bookUtils);
