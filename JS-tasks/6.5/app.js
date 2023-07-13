@@ -55,3 +55,10 @@ let numbersCopy = [...numbers];
 numbersCopy[3] = [4];
 console.log(numbersCopy);
 console.log(numbers);
+
+let first = 1;
+let second = 2;
+console.log(first, second);
+[first, second] = [second, first];
+
+console.log(first, second);
