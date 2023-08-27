@@ -11,7 +11,7 @@ async function fetchPosts(userID) {
   const posts = await response.json();
   return posts;
 }
-
+console.log(posts, users); //for testing only
 async function displayUserAndPosts() {
   try {
     const users = await fetchUsers();
