@@ -8,9 +8,22 @@ const SharedLayout = ({ user }) => {
         <div className="header-right">{user && <span>Hello, {user.name}</span>}</div>
       </header>
       <nav>
-        <ul className="nav-links">{/* Your code here */}</ul>
+        <ul className="nav-links">
+          <li>
+            <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="add" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+              add product
+            </NavLink>
+          </li>
+        </ul>
       </nav>
-      {/* Your code here */}
+      <main>
+        <Outlet />
+      </main>
       <footer>
         <p>All Rights Reserved</p>
       </footer>

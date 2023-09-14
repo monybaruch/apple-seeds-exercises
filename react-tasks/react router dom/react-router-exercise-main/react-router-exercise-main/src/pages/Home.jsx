@@ -6,9 +6,7 @@ const Home = ({ products }) => {
       {products.map((product) => (
         <div className="product-card" key={product.id}>
           <h2>
-            <Link to={`/products/${product.id}`}>
-              {product.name}
-            </Link>
+            <Link to={`/products/${product.id}`}>{product.name}</Link>
           </h2>
           <p>{product.description}</p>
           <div className="product-details">

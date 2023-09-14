@@ -24,13 +24,28 @@ const routes = [
       },
       {
         path: 'products',
-        children: [],
+        children: [
+          {
+            path: ':productId',
+            element: <Product products={products} />,
+          },
+          {
+            path: ':productId/edit',
+            element: (
+              <ProtectedRoute user={user}>
+                <EditProduct />
+              </ProtectedRoute>
+            ),
+          },
+          { path: '*', element: <NotFound /> },
+        ],
       },
     ],
   },
 ];
 
 const App = () => {
-  return <></>;
+  const router = createBrowserRouter(routes);
+  return <RouterProvider router={router} />;
 };
 export default App;
