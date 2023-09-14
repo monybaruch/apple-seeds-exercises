@@ -4,10 +4,15 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { products } from '../mock/mockData';
 
 const EditProduct = () => {
-  // Your code here...
+  const { productId } = useParams();
+  const navigate = useNavigate();
+  const product = products.find((p) => p.id === parseInt(productId));
 
   const [formData, setFormData] = useState({
-    // Your code here...
+    name: product.name,
+    description: product.description,
+    price: product.price,
+    stock: product.stock,
   });
 
   const handleChange = (e) => {
@@ -19,7 +24,7 @@ const EditProduct = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Your code here...
+    navigate('/');
   };
 
   return (
@@ -42,7 +47,9 @@ const EditProduct = () => {
           <label htmlFor="stock">Stock</label>
           <input type="number" name="stock" value={formData.stock} onChange={handleChange} />
         </div>
-        <button className="submit-btn" type="submit">Update</button>
+        <button className="submit-btn" type="submit">
+          Update
+        </button>
       </form>
     </div>
   );
