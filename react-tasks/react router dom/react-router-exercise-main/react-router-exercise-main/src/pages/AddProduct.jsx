@@ -2,16 +2,18 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const AddProduct = () => {
+  const navigate = useNavigate();
+
   const [product, setProduct] = useState({
     name: '',
     description: '',
     price: 0,
-    stock: 0
+    stock: 0,
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setProduct(prev => ({ ...prev, [name]: value }));
+    setProduct((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
@@ -21,8 +23,9 @@ const AddProduct = () => {
       name: '',
       description: '',
       price: 0,
-      stock: 0
+      stock: 0,
     });
+    navigate('/');
   };
 
   return (
@@ -45,7 +48,9 @@ const AddProduct = () => {
           <label>Stock</label>
           <input type="number" name="stock" value={product.stock} onChange={handleChange} />
         </div>
-        <button type="submit" className="submit-btn">Add Product</button>
+        <button type="submit" className="submit-btn">
+          Add Product
+        </button>
       </form>
     </div>
   );
