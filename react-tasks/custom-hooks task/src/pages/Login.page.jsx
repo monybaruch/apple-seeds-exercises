@@ -27,7 +27,10 @@ const Login = () => {
     handleChange: handlePasswordChange,
   } = useInput('please enter a valid password!');
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+  };
 
   return (
     <Wrapper className="full-page">
