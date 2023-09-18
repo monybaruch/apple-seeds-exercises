@@ -1,7 +1,7 @@
 const singleDigimon = ({ image, digimonName }) => {
   return (
     <article>
-      <img src={image}></img>
+      <img className="image" src={image}></img>
       <div>
         <header>
           <h2>{digimonName}</h2>
