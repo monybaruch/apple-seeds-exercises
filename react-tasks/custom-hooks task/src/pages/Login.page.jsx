@@ -40,8 +40,8 @@ const Login = () => {
       setTimeout(() => {
         setIsLoading(false);
         localStorage.setItem('userData', JSON.stringify({ name, email }));
+        navigate('/main');
       }, 3000);
-      navigate('/main');
     }
   };
 
@@ -79,7 +79,7 @@ const Login = () => {
           error={passwordError.isError}
           message={passwordError.message}
         />
-        <button type="submit" className="btn btn-block">
+        <button type="submit" className="btn btn-block" disabled={isLoading}>
           {/* Loading */}
           {isLoading ? 'Loading...' : 'Log In'}
         </button>
