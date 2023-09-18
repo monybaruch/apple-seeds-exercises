@@ -15,11 +15,10 @@ const Main = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!user) {    
+    if (!user) {
       navigate('/');
     }
   }, [navigate, user]);
-
 
   const delUser = (id) => {
     const newUsers = users.filter((user) => user.id !== id);
@@ -28,9 +27,9 @@ const Main = () => {
 
   return (
     <Wrapper>
-      <main className='dashboard'>
+      <main className="dashboard">
         <Navbar user={user} setUser={setUser} />
-        <div className='dashboard-page'>
+        <div className="dashboard-page">
           <UsersList users={users} deleteUser={delUser} />
         </div>
       </main>

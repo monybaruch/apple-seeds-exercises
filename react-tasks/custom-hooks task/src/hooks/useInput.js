@@ -12,7 +12,7 @@ const useInput = (message, validationFn = null) => {
     if (validationFn) {
       isError = validationFn(value);
     }
-    if (value === ' ' || isError) {
+    if (value === '' || isError) {
       setError({
         isError: true,
         message,
