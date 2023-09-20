@@ -3,15 +3,16 @@ import { useState } from 'react';
 const DigimonInfo = () => {
   const [index, setIndex] = useState(0);
   const { image, digimonName } = digimons[index];
+
   const wrongDigimon = () => {
     setIndex((currentIndex) => {
-      const newIndex = currentIndex - 1;
+      const newIndex = (currentIndex - 1 + digimons.length) % digimons.length;
       return newIndex;
     });
   };
   const correctDigimon = () => {
     setIndex((currentIndex) => {
-      const newIndex = currentIndex + 1;
+      const newIndex = (currentIndex + 1) % digimons.length;
       return newIndex;
     });
   };
