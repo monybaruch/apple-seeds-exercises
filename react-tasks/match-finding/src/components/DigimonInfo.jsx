@@ -35,6 +35,9 @@ const DigimonInfo = () => {
             }
             if (correctAnswer >= 5) {
               return <h1>you win! you are a digimon expert</h1>;
+            }
+            if (wrongAnswer === 4 && correctAnswer === 4) {
+              return <h1>it's a draw!</h1>;
             } else {
               return (
                 <>
